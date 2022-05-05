@@ -1,0 +1,16 @@
+package com.ob.employee.employeedetails.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@Entity
+@Table(name="employee_info")
+public class Employees {
+
+}

@@ -1,0 +1,30 @@
+package com.ob.employee.employeedetails.dto;
+
+import java.util.List;
+
+import javax.management.loading.PrivateClassLoader;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "employee_leave")
+public class EmployeeLeave {
+	@Id
+	private int id;
+	@Column(name="leave_date")
+	private String leaveDate;
+	@Column(name="leave_status")
+	private String leaveStatus;
+	@ManyToOne
+	private List<Employees> employees;
+}

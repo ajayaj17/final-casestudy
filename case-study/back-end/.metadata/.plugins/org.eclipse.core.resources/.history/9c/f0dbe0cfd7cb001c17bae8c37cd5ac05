@@ -1,0 +1,20 @@
+package com.ob.employee.employeedetails.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name="employee_leave")
+public class EmployeeLeave {
+	private int employeeId;
+	private String leaveDate;
+	private String leaveStatus;
+
+}

@@ -1,0 +1,6 @@
+package com.ob.employee.employeedetails.dto;
+
+@Entity
+public class Employees {
+
+}
