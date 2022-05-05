@@ -1,0 +1,7 @@
+package com.ob.employee.employeedetails.services;
+package com.ob.employee.employeedetails.dto
+public class ShowDetails {
+public void showDetails(Employee employee) {
+	
+}
+}

@@ -1,0 +1,5 @@
+package com.ob.employee.employeedetails.services;
+
+public class EmployeeApplication {
+
+}

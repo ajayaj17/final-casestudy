@@ -1,0 +1,25 @@
+package com.ob.employee.employeedetails.services;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import com.ob.employee.employeedetails.dto.EmployeeLeave;
+import com.ob.employee.employeedetails.dto.Employees;
+
+public class EmployeeApplication {
+	public void showLeaveStatus(Employees employees) {
+		
+		String str4 = "from EmployeeLeave where employeeId=:eId";
+		Query query4 = entityManager.createQuery(str4);
+		int eId4 = singleResult.getEmployeeId();
+		query4.setParameter("eId", eId4);
+		List resultList = query4.getResultList();
+
+		for (Object object : resultList) {
+			EmployeeLeave employeeLeave = (EmployeeLeave) object;
+			System.out.println("==> " + employeeLeave);
+		}
+	}
+
+}
