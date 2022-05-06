@@ -28,14 +28,12 @@ public class EmployeeApplication {
 			int eId4 = employees.getEmployeeId();
 			query4.setParameter("eId", eId4);
 			List resultList = query4.getResultList();
-			if (resultList.isEmpty()) {
-				
-					System.out.println("data not found");
-				
-				}else {
-					for (Object object : resultList) {
+			if (resultList.contains("eId")) {
+				for (Object object : resultList) {
 					EmployeeLeave employeeLeave = (EmployeeLeave) object;
 					System.out.println("==> " + employeeLeave);
+				}else {
+					System.out.println("data not found");
 				}
 			}
 		} catch (Exception e) {

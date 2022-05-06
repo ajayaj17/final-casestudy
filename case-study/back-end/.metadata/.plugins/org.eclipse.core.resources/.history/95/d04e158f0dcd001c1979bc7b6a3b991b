@@ -43,16 +43,12 @@ public class ManagerOrginize {
 		
 		System.out.println("Enter employee id:");
 		int eId2 = s2.nextInt();
-		System.out.println("Enter Sl. no. to update");
-		int id=s2.nextInt();
 		System.out.println("Enter leave status");
 		System.out.println("Type approved/reject ");
 		String leaveStatus = s1.nextLine();
-		String str2 = "update EmployeeLeave set leaveStatus =:leaveStatus where employeeId =:eId and id=:id";
+		String str2 = "update EmployeeLeave set leaveStatus =:leaveStatus where employeeId =:eId";
 		Query query2 = entityManager.createQuery(str2);
 		query2.setParameter("eId", eId2);
-		query2.setParameter("id", id);
-		
 		query2.setParameter("leaveStatus", leaveStatus);
 		entityTransaction.begin();
 		query2.executeUpdate();

@@ -36,8 +36,7 @@ public class EmployeeLeave {
 //	private Employees employees;
 	@Override
 	public String toString() {
-		return "EmployeeLeave [id=" + id + ", leaveDate=" + leaveDate + ", leaveStatus=" + leaveStatus + ", employeeId="
-				+ employeeId + "]";
+		return "EmployeeLeave [id=" + id + ", leaveDate=" + leaveDate + ", leaveStatus=" + leaveStatus + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -48,8 +47,6 @@ public class EmployeeLeave {
 		if (getClass() != obj.getClass())
 			return false;
 		EmployeeLeave other = (EmployeeLeave) obj;
-		if (employeeId != other.employeeId)
-			return false;
 		if (id != other.id)
 			return false;
 		if (leaveDate == null) {
@@ -68,7 +65,6 @@ public class EmployeeLeave {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + employeeId;
 		result = prime * result + id;
 		result = prime * result + ((leaveDate == null) ? 0 : leaveDate.hashCode());
 		result = prime * result + ((leaveStatus == null) ? 0 : leaveStatus.hashCode());

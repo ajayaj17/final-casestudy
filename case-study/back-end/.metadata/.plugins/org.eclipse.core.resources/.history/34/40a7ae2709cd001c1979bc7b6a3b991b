@@ -33,7 +33,7 @@ public class App {
 		Scanner s2 = new Scanner(System.in);
 
 		do {
-			System.out.println("Press\n1.Register\n2.Login\n3.Exit");
+			System.out.println("Press\n 1.Register\n2.Login\n3.Exit");
 			int key1 = s2.nextInt();
 
 			switch (key1) {
@@ -98,7 +98,6 @@ public class App {
 
 			case 3:
 				bool = false;
-				System.out.println("session closed");
 				break;
 			default:
 				System.out.println("invalid input");

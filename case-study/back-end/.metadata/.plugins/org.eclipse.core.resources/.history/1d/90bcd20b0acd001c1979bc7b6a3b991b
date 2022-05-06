@@ -29,11 +29,10 @@ public class EmployeeApplication {
 			query4.setParameter("eId", eId4);
 			List resultList = query4.getResultList();
 			if (resultList.isEmpty()) {
-				
+				for (Object object : resultList) {
 					System.out.println("data not found");
-				
+					
 				}else {
-					for (Object object : resultList) {
 					EmployeeLeave employeeLeave = (EmployeeLeave) object;
 					System.out.println("==> " + employeeLeave);
 				}
